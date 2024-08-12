@@ -123,6 +123,9 @@ return {
           },
         },
         yamlls = {},
+        zls = {
+          cmd = { '/Users/gm/.local/share/nvim/mason/packages/zls/zig-out/bin/zls' },
+        },
       }
 
       -- Default handlers for LSP
