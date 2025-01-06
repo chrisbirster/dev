@@ -94,21 +94,6 @@ nnoremap("S", function()
   vim.api.nvim_feedkeys(keys, "n", false)
 end)
 
--- Open Spectre for global find/replace
-nnoremap("<leader>S", function()
-  require("spectre").toggle()
-end)
-
--- Open Spectre for global find/replace for the word under the cursor in normal mode
-nnoremap("<leader>sw", function()
-  require("spectre").open_visual({ select_word = true })
-end, { desc = "Search current word" })
-
--- Open Spectre for global find/replace for the word under the cursor in visual mode
-vnoremap("<leader>sw", function()
-  require("spectre").open_visual({ select_word = true })
-end, { desc = "Search current word" })
-
 -- Press 'H', 'L' to jump to start/end of a line (first/last char)
 nnoremap("L", "$")
 nnoremap("H", "^")
@@ -370,9 +355,6 @@ tnoremap("<space>", "<space>")
 nnoremap("<leader><tab>", ":lua require('FTerm').toggle()<CR>")
 tnoremap("<leader><tab>", '<C-\\><C-n>:lua require("FTerm").toggle()<CR>')
 
--- Noice
-nnoremap("<leader>nn", ":NoiceDismiss<CR>")
 nnoremap("st", ":TodoTelescope<CR>")
-
 
 return M

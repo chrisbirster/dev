@@ -72,6 +72,7 @@ return {
         bashls = {},
         -- clangd = {},
         cssls = {},
+        emmet_ls = {},
         gleam = {},
         graphql = {},
         html = {},
@@ -108,7 +109,8 @@ return {
             },
           },
         },
-        tsserver = {
+        -- tsserver = {
+        ts_ls = {
           settings = {
             experimental = {
               enableProjectDiagnostics = true,

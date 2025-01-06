@@ -2,9 +2,9 @@
 vim.opt.nu = true
 vim.opt.rnu = true
 
--- Concealer for Neorg
-vim.opt.conceallevel = 2
-vim.opt.concealcursor = 'nc'
+-- -- Concealer for Neorg
+-- vim.opt.conceallevel = 2
+-- vim.opt.concealcursor = 'nc'
 
 -- Set tabs to 2 spaces
 vim.opt.tabstop = 2
@@ -22,8 +22,10 @@ vim.opt.breakindent = true
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
 
--- Disable text wrap
-vim.opt.wrap = false
+-- Enable text wrap
+vim.opt.textwidth = 120
+vim.opt.wrap = true
+vim.opt.linebreak = true
 
 -- Set leader key to space
 vim.g.mapleader = " "
