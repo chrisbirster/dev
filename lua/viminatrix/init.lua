@@ -1,0 +1,6 @@
+require("viminatrix.options")
+require("viminatrix.remap")
+require("viminatrix.bootstrap")
+require("viminatrix.vertical_help")
+require("viminatrix.edit_text")
+require("viminatrix.yank_util")
