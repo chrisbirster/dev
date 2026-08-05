@@ -18,8 +18,8 @@ return {
     },
     config = function()
       local map_lsp_keybinds = require("viminatrix.keymaps").map_lsp_keybinds -- Has to load keymaps before pluginslsp
-      local opam_prefix = os.getenv("OPAM_SWITCH_PREFIX")
-      local opam_cmd = opam_prefix .. "_opam/bin/ocamllsp"
+      -- local opam_prefix = os.getenv("OPAM_SWITCH_PREFIX")
+      -- local opam_cmd = opam_prefix .. "_opam/bin/ocamllsp"
 
       -- Use neodev to configure lua_ls in nvim directories - must load before lspconfig
       require("neodev").setup()
@@ -92,9 +92,9 @@ return {
         solidity = {},
         sqlls = {},
         templ = {},
-        ocamllsp = {
-          cmd = { opam_cmd },
-        },
+        -- ocamllsp = {
+        --   cmd = { opam_cmd },
+        -- },
         tailwindcss = {
           filetypes = {
             "gleam",

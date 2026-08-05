@@ -17,6 +17,7 @@ return {
           "c",
           "css",
           "gleam",
+          "go",
           "graphql",
           "html",
           "javascript",

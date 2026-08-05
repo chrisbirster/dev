@@ -8,7 +8,17 @@ local harpoon_mark = require("harpoon.mark")
 local illuminate = require("illuminate")
 local utils = require("viminatrix.utils")
 
-local M = {}
+local function bind(op, outer_opts)
+	outer_opts = vim.tbl_extend("force", { noremap = true, silent = true }, outer_opts or {})
+
+	return function(lhs, rhs, opts)
+		opts = vim.tbl_extend("force", outer_opts, opts or {})
+		vim.keymap.set(op, lhs, rhs, opts)
+	end
+end
+
+local nnoremap = bind("n")
+
 
 local TERM = os.getenv("TERM")
 
