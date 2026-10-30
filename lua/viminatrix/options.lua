@@ -1,35 +1,32 @@
--- Enable relative line numbers
-vim.opt.nu = true
-vim.opt.rnu = true
+-- mapleader
+vim.g.mapleader = " "
+vim.g.maplocalleader = ";"
 
--- -- Concealer for Neorg
--- vim.opt.conceallevel = 2
--- vim.opt.concealcursor = 'nc'
+-- GUI launchers do not always inherit Homebrew's shell PATH on macOS.
+local homebrew_bin = "/opt/homebrew/bin"
+if vim.fn.isdirectory(homebrew_bin) == 1 and not vim.env.PATH:find(homebrew_bin, 1, true) then
+	vim.env.PATH = homebrew_bin .. ":" .. vim.env.PATH
+end
+
+-- Enable buffer line numbers and make relative to cursor
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- Set tabs to 2 spaces
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 
--- Enable auto indenting and set it to spaces
+-- Enable auto indenting and set to spaces
 vim.opt.smartindent = true
 vim.opt.shiftwidth = 2
 
--- Enable smart indenting (see https://stackoverflow.com/questions/1204149/smart-wrap-in-vim)
+-- Enable smart indenting
 vim.opt.breakindent = true
 
 -- Enable incremental searching
-vim.opt.incsearch = true
+vim.opt.incsearch= true
 vim.opt.hlsearch = true
-
--- Enable text wrap
-vim.opt.textwidth = 120
-vim.opt.wrap = true
-vim.opt.linebreak = true
-
--- Set leader key to space
-vim.g.mapleader = " "
-vim.g.maplocalleader = ";"
 
 -- Better splitting
 vim.opt.splitbelow = true
@@ -80,9 +77,6 @@ vim.opt.colorcolumn = "80"
 
 -- Always show the sign column
 vim.opt.signcolumn = "yes"
-
--- Disable vim-kitty-navigator default mappings
--- vim.g.kitty_navigator_no_mappings = 1
 
 vim.opt.guicursor = {
   "n-v-c:block",                                  -- Normal, visual, command-line: block cursor
